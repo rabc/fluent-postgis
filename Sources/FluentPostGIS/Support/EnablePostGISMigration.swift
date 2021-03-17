@@ -11,7 +11,7 @@ public struct EnablePostGISMigration: Migration {
         case notSqlDatabase
     }
     
-    public init() { }
+    //public init() { } causing error
 
     public func prepare(on database: Database) -> EventLoopFuture<Void> {
         guard let db = database as? SQLDatabase else {
